@@ -53,3 +53,7 @@ base DTS shipped in v25.12.6 omits them. Upstream `main` already provides both
 properties in `mt7987.dtsi`; this is a compatibility adjustment for the older
 base, not an upstream SPI driver or hardware fix. It leaves the chip select,
 52 MHz clock limit, quad-data mode and NAND partitions unchanged.
+The corresponding upstream fix is
+[`2e30f1667bc4`](https://github.com/openwrt/openwrt/commit/2e30f1667bc466f312b1a70d851a110aa8646b9e)
+(2026-03-25); its stated purpose is to satisfy required binding properties and
+resolve `dtc` warnings.
