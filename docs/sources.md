@@ -13,7 +13,7 @@ with follow-up fixes by Chukun Pan and other OpenWrt contributors:
 - [DTS compiler fixes](https://github.com/openwrt/openwrt/commit/3158f18538d8c2f9670f3c567a32e54fc43ab409)
 - [NVMEM conversion](https://github.com/openwrt/openwrt/commit/53fa04d2619f5ac8d3043c08e1beddf5afa0651e)
 
-Imported Tenda source blobs before the additional 25.12.6 SPI-cell correction:
+Imported Tenda source blobs before the additional 25.12.6 SPI-cell compatibility declarations:
 DTS `368b7366218522d95344eeef03add3be943fb35e`, image recipe
 `b43ae5958c7484f67e64c0bd04926409bc093847`, network arm
 `f1d1442825f4be8654e570afc26769034edad176`.
