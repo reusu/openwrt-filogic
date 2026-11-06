@@ -1,0 +1,24 @@
+Local validation, 2026-11-06
+
+Base: OpenWrt v25.12.6, commit 64900e756efa667774214f9c6b17c113222e01f7
+Kernel bindings: Linux 6.12.112 plus the release's MT7987 bindings
+Compiler: Apple clang 21.0.0 preprocessor; dtc 1.8.1
+
+PASS: 12 Python tests (overlay synchronization/rollback and Tenda image header).
+PASS: sh -n apply.sh; actionlint 1.7.7 (shellcheck/pyflakes disabled).
+PASS: Fresh source overlay: 16 updated files; second apply: zero updates.
+PASS: Official H5000M DTS and image recipe unchanged byte for byte.
+PASS: All four owned DTS files preprocess and compile.
+PASS: 42 TE43 DTB property assertions and 28 Tenda DTB property assertions.
+PASS: Injected upgrade scripts pass shell syntax checking; mocked dispatch
+      selects NAND for Tenda and eMMC kernel/rootfs for TE43.
+PASS: Tenda God1 header has the expected magic, gzip CRC32 and payload length;
+      the input payload is unchanged after the 16-byte header.
+
+Remaining dtc warnings are recorded, not suppressed: inherited MT7987
+unit-address/reg warnings and existing nested PCI bridge ranges warnings.
+The corrected SPI address/size-cell warnings are absent.
+
+This record covers local source/format checks. Complete firmware and module
+compilation is a separate GitHub Actions check. No router was flashed and
+hardware audio, MCU SPI framing and the electrical defects need board testing.

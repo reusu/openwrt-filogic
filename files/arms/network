@@ -1,0 +1,8 @@
+	hiveton,h5s-te42|\
+	hiveton,h5s-te43|\
+	edgepi,e87n)
+		ucidef_set_interfaces_lan_wan eth1 eth0
+		;;
+	tenda,be12-pro)
+		ucidef_set_interfaces_lan_wan "lan3 lan4 lan5 eth1" eth2
+		;;

@@ -1,0 +1,8 @@
+/artifacts/
+*.tar.gz
+*.tmp
+*.new
+.DS_Store
+.idea/
+__pycache__/
+*.pyc
